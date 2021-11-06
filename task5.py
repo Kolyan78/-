@@ -8,7 +8,4 @@ def to_dict(lst):
     pass
 
 lst_ = []
-...
-
-
 print(to_dict(lst_))
