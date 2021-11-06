@@ -11,6 +11,4 @@ lst_ = []
 ...
 
 
-
-
 print(to_dict(lst_))
