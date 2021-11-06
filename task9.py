@@ -6,12 +6,12 @@ import random
 
 def more_than_five(lst):
     print(lst)
-    b = [x for x in lst if abs(x) > 5]
+    b = [abs(x) for x in lst if abs(x) > 5]
     return b
 
 def gen_list(num):
     a = [random.randint(-10, 10) for _ in list(range(num))]
     return a
 
-a = gen_list(20)
+a = gen_list(30)
 print (more_than_five(a))
