@@ -9,6 +9,7 @@ import random
 
 def count_it(sequence):
     dict_ = {}
+    #Можно ли нижеследующий цикл с условными операторами сделать в виде тернарного оператора для лаконичности?
     for i in str(sequence):
         if i in dict_:
             dict_[i] += 1
@@ -16,13 +17,8 @@ def count_it(sequence):
             dict_[i] = 1
     sorted_dict = {}
     sorted_keys = sorted(dict_, key=dict_.get, reverse=True)
-    i = 3 ''' Эта переменная сделана для того, чтобы на третьей итерации цикла прекратить создание словаря.
-            А можно ли сделать как-то более лаконично?'''
-    for w in sorted_keys:
+    for w in sorted_keys[:3]:
         sorted_dict[w] = dict_[w]
-        i -= 1
-        if i == 0:
-            break
     return sorted_dict
 
 # Эта функция генерирует последовательность случайной длины от 15 до 50 чисел, состоящей из случайных чисел от 0 до 9
