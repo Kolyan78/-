@@ -5,3 +5,20 @@
 Для построения словаря создайте функцию count_it(sequence), принимающую строку из цифр.
 Функция должна возвратить словарь из 3-х самых часто встречаемых чисел.
 '''
+import random
+
+def count_it(sequence):
+
+    return sequence
+
+# Эта функция генерирует последовательность случайной длины от 10 до 40 числе, состоящей из случайных чисел от 0 до 9
+def gen_sequence():
+    a = ""
+    l = random.randint(15, 50)
+    for i in range(l):
+        a += str(random.randint(0,9))
+    return int(a)
+
+seq = gen_sequence()
+print(seq)
+print(count_it(seq))
