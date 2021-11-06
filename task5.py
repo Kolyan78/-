@@ -5,9 +5,8 @@
 '''
 
 def to_dict(lst):
-    for i in lst:
-        print(str(i))
-    return(lst)
+    dict_ = {str(i):i for i in lst}
+    return(dict_)
 
 lst_ = [1, 3, 5, "Word", "Length", 25.4, True]
 print(to_dict(lst_))
