@@ -8,10 +8,24 @@
 import random
 
 def count_it(sequence):
+    dict_ = {}
+    for i in str(sequence):
+        if i in dict_:
+            dict_[i] += 1
+        else:
+            dict_[i] = 1
+    sorted_dict = {}
+    sorted_keys = sorted(dict_, key=dict_.get, reverse=True)
+    i = 3 ''' Эта переменная сделана для того, чтобы на третьей итерации цикла прекратить создание словаря.
+            А можно ли сделать как-то более лаконично?'''
+    for w in sorted_keys:
+        sorted_dict[w] = dict_[w]
+        i -= 1
+        if i == 0:
+            break
+    return sorted_dict
 
-    return sequence
-
-# Эта функция генерирует последовательность случайной длины от 10 до 40 числе, состоящей из случайных чисел от 0 до 9
+# Эта функция генерирует последовательность случайной длины от 15 до 50 чисел, состоящей из случайных чисел от 0 до 9
 def gen_sequence():
     a = ""
     l = random.randint(15, 50)
