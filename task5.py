@@ -10,7 +10,7 @@ def to_dict(lst):
 lst_ = []
 ...
 
-привет
+привет, пока
 
 
 print(to_dict(lst_))
